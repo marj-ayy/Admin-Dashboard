@@ -11,8 +11,8 @@ body{
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 0.6fr 3fr;
-    grid-template-rows: 1fr 4fr;
-    row-gap: 40px;
+    /* grid-template-rows: 1fr 4fr; */
+    grid-template-rows: repeat(2, max-content);
     font-family: Roboto, sans-serif;
 }
 
@@ -26,30 +26,69 @@ div{
 
 .header{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
     gap: 20px;
     grid-column: 2/-1;
     grid-row: 1/2;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 2;
+}
+
+.header , .header div{
+    border: none;
 }
 
 .header-first{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: repeat(2, max-content); */
+    gap: 80px; 
 }
 
 .header-second{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
 }
 
 .notifications-container, .upload-share-container ul{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, max-content);
+    align-items: center;
+    gap: 30px;
+}
+
+
+.upload-share-container ul{
+    height: 100%;
+}
+
+.upload-share-container button{
+    border: none;
+    background-color: #1992d4;
+    border-radius: 40px;
+    color: white;
+    padding: 10px 40px;
+    font-weight: bold;
+}
+
+.notifications-container h6{
+    font-size: 15px;
 }
 
 .greeting-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    padding-left: 50px;
+    gap: 20px;
+}
+
+.greeting-container h4{
+    font-size: 25px;
 }
 
 .sidebar{
@@ -129,7 +168,10 @@ div{
     column-gap: 20px;
     grid-column: 2/-1;
     grid-row: 2/-1;
-    padding: 0 30px 80px 20px;
+    padding: 40px 30px 80px 20px;
+    background-color: #e2e8f0;
+    border: none;
+    z-index: 1;
 }
 
 .projects > h5{
@@ -142,4 +184,21 @@ div{
 
 .yellow-stripe-container{
     background-color: #f0b429;
+}
+
+input[type="search"]{
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 40px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.searchbar-container{
+    display: grid;
+    grid-template-columns: min-content minmax(90%, 600px);
+    gap: 15px;
+    align-items: center;
+    padding-left: 50px;
 }
