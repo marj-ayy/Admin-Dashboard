@@ -11,7 +11,6 @@ body{
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 0.6fr 3fr;
-    /* grid-template-rows: 1fr 4fr; */
     grid-template-rows: repeat(2, max-content);
     font-family: Roboto, sans-serif;
 }
@@ -125,7 +124,7 @@ div{
 
 .project-container{
     display: grid;
-    grid-template-columns: 1fr 70fr;
+    grid-template-columns: 1.5fr 70fr;
 }
 
 .project{
@@ -137,12 +136,16 @@ div{
     display: grid;
     grid-template-columns: repeat(3, min-content);
     gap: 20px;
+    align-items: end;
+    justify-content: end;
+    margin: 0 30px 40px 0;
 }
+
 
 .projects{
     display: grid;
-    grid-template-rows: min-content 250px;
-    grid-auto-rows: 250px;
+    grid-template-rows: min-content 200px;
+    grid-auto-rows: 200px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     grid-column: 1/2;
@@ -174,7 +177,7 @@ div{
 .announcements{
     display: grid;
     grid-template-rows: min-content 1fr;
-    gap: 15px;
+    gap: 10px;
 }
 
 .main{
@@ -187,8 +190,15 @@ div{
     grid-row: 2/-1;
     padding: 40px 30px 80px 20px;
     background-color: #e2e8f0;
-    border: none;
     z-index: 1;
+}
+
+.main, .main *{
+    border: none;
+}
+
+.main h5{
+    font-size: 18px;
 }
 
 .projects > h5{
@@ -218,4 +228,28 @@ input[type="search"]{
     gap: 15px;
     align-items: center;
     padding-left: 50px;
+}
+
+.project, .trends-container, .announcements-container{
+    background-color: white;
+}
+.project-container, .trends-container, .announcements-container{
+    border-radius: 10px;
+}
+
+.project-container{
+    overflow: hidden;
+}
+
+.project h6{
+    font-size: 16px;
+}
+
+.project p{
+    color: gray;
+    font-size: 14px;
+}
+
+.project-content{
+    padding: 30px 5px 0 20px;
 }
