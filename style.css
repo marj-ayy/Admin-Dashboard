@@ -211,6 +211,8 @@ div{
 
 .yellow-stripe-container{
     background-color: #f0b429;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 input[type="search"]{
@@ -232,13 +234,17 @@ input[type="search"]{
 
 .project, .trends-container, .announcements-container{
     background-color: white;
+    box-shadow: 0 5px 10px -5px gray,
+                5px 0 10px -5px gray;
+
 }
-.project-container, .trends-container, .announcements-container{
+.trends-container, .announcements-container{
     border-radius: 10px;
 }
 
-.project-container{
-    overflow: hidden;
+.project{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .project h6{
