@@ -94,16 +94,33 @@ div{
 .sidebar{
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    gap: 70px;
+    gap: 60px;
     grid-row: 1/-1;
     grid-column: 1/2;
     background-color: #1992d4;
+    color: white;
+    font-weight: bold;
+    padding: 10px 60px 10px 20px;
+}
+
+.sidebar, .sidebar div{
+    border: none;
 }
 
 .dashboard-container, .param-container{
     display: grid;
     grid-template-columns: repeat(2, min-content);
     gap: 10px;
+    align-items: center;
+}
+
+.param-container{
+    padding-left: 20px;
+    gap: 20px 30px;
+}
+
+.dashboard-container{
+    font-size: 20px;
 }
 
 .project-container{
