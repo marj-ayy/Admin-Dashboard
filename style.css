@@ -19,10 +19,6 @@ ul{
     list-style-type: none;
 }
 
-div{
-    border: 1px solid black;
-}
-
 .header{
     display: grid;
     grid-template-rows: repeat(2, max-content);
@@ -157,8 +153,10 @@ div{
 
 .announcements-container{
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-rows: repeat(3, min-content);
+    align-content: center;
+    padding: 0 20px 0 20px;
+    gap: 15px;
 }
 
 .trend{
@@ -180,7 +178,7 @@ div{
 
 .main{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     row-gap: 40px;
     column-gap: 20px;
@@ -261,4 +259,21 @@ input[type="search"]{
     /* padding: 30px 5px 0 20px; */
     padding-right: 5px;
     padding-left: 20px;
+}
+
+.announcement h6{
+    font-size: 12px;
+}
+
+.announcement p{
+    font-size: 10px;
+    color: gray;
+}
+
+.announcement{
+    padding-bottom: 15px;
+}
+
+.announcement:first-child, .announcement:nth-child(2){
+    border-bottom: solid 1px gray;
 }
