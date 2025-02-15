@@ -32,10 +32,6 @@ ul{
     z-index: 2;
 }
 
-.header , .header div{
-    border: none;
-}
-
 .header-first{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -98,10 +94,6 @@ ul{
     padding: 10px 60px 10px 20px;
 }
 
-.sidebar, .sidebar div{
-    border: none;
-}
-
 .dashboard-container, .param-container{
     display: grid;
     grid-template-columns: repeat(2, min-content);
@@ -162,12 +154,15 @@ ul{
 .trend{
     display: grid;
     grid-template-columns: repeat(2, max-content);
+    gap: 10px;
+    align-items: center;
 }
 
 .trends-container{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     gap: 30px;
+    padding: 20px;
 }
 
 .announcements{
@@ -187,10 +182,6 @@ ul{
     padding: 40px 30px 80px 20px;
     background-color: #e2e8f0;
     z-index: 1;
-}
-
-.main, .main *{
-    border: none;
 }
 
 .main h5{
