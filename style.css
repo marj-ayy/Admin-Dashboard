@@ -127,18 +127,16 @@ div{
     grid-template-columns: 1.5fr 70fr;
 }
 
-.project{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-}
-
 .project ul{
     display: grid;
     grid-template-columns: repeat(3, min-content);
+    grid-template-rows: min-content;
     gap: 20px;
     align-items: end;
     justify-content: end;
-    margin: 0 30px 40px 0;
+    /* margin: 0 30px 40px 0; */
+    margin-right: 30px;
+    align-content: center;
 }
 
 
@@ -245,6 +243,9 @@ input[type="search"]{
 .project{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 30px;
 }
 
 .project h6{
@@ -257,5 +258,7 @@ input[type="search"]{
 }
 
 .project-content{
-    padding: 30px 5px 0 20px;
+    /* padding: 30px 5px 0 20px; */
+    padding-right: 5px;
+    padding-left: 20px;
 }
